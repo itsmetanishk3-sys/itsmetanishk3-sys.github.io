@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanishk Srivastava | ECE Portfolio</title>
+  <meta name="description" content="Portfolio of Tanishk Srivastava — Electrical & Computer Engineering student, builder, and problem solver." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── CURSOR ─────────────────────────────────────────── -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ─── PARTICLES CANVAS ──────────────────────────────── -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ─── NAVBAR ────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="glitch" data-text="TS">&lt;TS/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="assets/resume.pdf" class="btn btn-outline btn-sm" target="_blank" download>
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting reveal-text">Hello, World! 👋 I'm</p>
+      <h1 class="hero-name glitch" data-text="Tanishk Srivastava">Tanishk Srivastava</h1>
+      <div class="hero-tagline">
+        <span class="static-text">I'm a </span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-bio">
+        Electrical &amp; Computer Engineering undergrad at <span class="highlight">ABES Engineering College, Ghaziabad</span> —
+        bridging the gap between hardware and software, circuits and code.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Let's Talk</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="social-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/tanishk-srivastava" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:tanishk@example.com" class="social-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-img">
+          <span class="avatar-placeholder">TS</span>
+        </div>
+        <div class="floating-badge badge-1"><i class="fas fa-microchip"></i> ECE</div>
+        <div class="floating-badge badge-2"><i class="fas fa-code"></i> Dev</div>
+        <div class="floating-badge badge-3"><i class="fas fa-bolt"></i> EE</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01. WHO AM I</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in-up">
+          <p>
+            I'm <strong>Tanishk Srivastava</strong>, an undergrad in <span class="highlight">Electrical and Computer Engineering</span>
+            at ABES Engineering College, Ghaziabad. I'm passionate about building things — from low-level embedded systems
+            and circuit designs to full-stack applications and AI-powered tools.
+          </p>
+          <p>
+            My dual background lets me think across layers — from transistors to terminal, from PCBs to Python.
+            I love solving real-world problems that sit at the intersection of hardware and software.
+          </p>
+          <p>
+            When I'm not engineering, I'm exploring new technologies, contributing to open-source projects,
+            and constantly leveling up.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap fade-in-right">
+          <div class="about-card tilt-card">
+            <div class="about-card-inner">
+              <h3 class="card-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+              <div class="education-item">
+                <span class="edu-degree">B.Tech — Electrical &amp; Computer Engineering</span>
+                <span class="edu-college">ABES Engineering College, Ghaziabad</span>
+                <span class="edu-year">2023 – 2027 (Expected)</span>
+              </div>
+              <h3 class="card-title mt-2"><i class="fas fa-heart"></i> Interests</h3>
+              <div class="interests-tags">
+                <span class="tag">Embedded Systems</span>
+                <span class="tag">IoT</span>
+                <span class="tag">Web Dev</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Circuit Design</span>
+                <span class="tag">Robotics</span>
+                <span class="tag">Signal Processing</span>
+                <span class="tag">Open Source</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ────────────────────────────────────────── -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02. WHAT I KNOW</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-categories">
+
+        <!-- Programming -->
+        <div class="skill-category fade-in-up">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span class="skill-name">C / C++</span><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div><span class="skill-pct">80%</span></div>
+            <div class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div><span class="skill-pct">70%</span></div>
+            <div class="skill-item"><span class="skill-name">MATLAB</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><span class="skill-pct">75%</span></div>
+          </div>
+        </div>
+
+        <!-- Hardware / EE -->
+        <div class="skill-category fade-in-up" style="--delay:.1s">
+          <h3 class="skill-cat-title"><i class="fas fa-microchip"></i> Hardware &amp; Embedded</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">Arduino / AVR</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span class="skill-name">Raspberry Pi</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><span class="skill-pct">75%</span></div>
+            <div class="skill-item"><span class="skill-name">Circuit Design (LTspice)</span><div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div><span class="skill-pct">80%</span></div>
+            <div class="skill-item"><span class="skill-name">PCB Design (KiCad)</span><div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div><span class="skill-pct">70%</span></div>
+          </div>
+        </div>
+
+        <!-- Web & Tools -->
+        <div class="skill-category fade-in-up" style="--delay:.2s">
+          <h3 class="skill-cat-title"><i class="fas fa-globe"></i> Web &amp; Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item"><span class="skill-name">HTML / CSS</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span class="skill-pct">90%</span></div>
+            <div class="skill-item"><span class="skill-name">Git &amp; GitHub</span><div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div><span class="skill-pct">85%</span></div>
+            <div class="skill-item"><span class="skill-name">Linux / Bash</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><span class="skill-pct">75%</span></div>
+            <div class="skill-item"><span class="skill-name">VS Code / PlatformIO</span><div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div><span class="skill-pct">90%</span></div>
+          </div>
+        </div>
+
+        <!-- Soft skills / Others -->
+        <div class="skill-category fade-in-up" style="--delay:.3s">
+          <h3 class="skill-cat-title"><i class="fas fa-brain"></i> Other Tech</h3>
+          <div class="tech-tags-grid">
+            <span class="tech-tag"><i class="fas fa-wave-square"></i> Signal Processing</span>
+            <span class="tech-tag"><i class="fas fa-network-wired"></i> IoT / MQTT</span>
+            <span class="tech-tag"><i class="fas fa-robot"></i> Machine Learning</span>
+            <span class="tech-tag"><i class="fas fa-project-diagram"></i> NumPy / Pandas</span>
+            <span class="tech-tag"><i class="fas fa-cube"></i> OpenCV</span>
+            <span class="tech-tag"><i class="fas fa-database"></i> SQL Basics</span>
+            <span class="tech-tag"><i class="fas fa-cogs"></i> Proteus Simulation</span>
+            <span class="tech-tag"><i class="fas fa-satellite"></i> Wireless Comm</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ──────────────────────────────────────── -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03. WHAT I'VE BUILT</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="hardware">Hardware</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="iot">IoT</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card tilt-card" data-category="iot hardware">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-home"></i></div>
+            <div class="project-category-tag">IoT · Hardware</div>
+            <h3 class="project-title">Smart Home Automation System</h3>
+            <p class="project-desc">An ESP8266-based home automation system that controls appliances via a web dashboard and voice commands using MQTT protocol.</p>
+            <div class="project-tech">
+              <span>ESP8266</span><span>MQTT</span><span>Python</span><span>HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="hardware">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-microchip"></i></div>
+            <div class="project-category-tag">Hardware · Embedded</div>
+            <h3 class="project-title">Line Following Robot</h3>
+            <p class="project-desc">Autonomous robot using IR sensors and PID control algorithm for smooth and accurate line tracking on a PCB chassis.</p>
+            <div class="project-tech">
+              <span>Arduino</span><span>C++</span><span>PID</span><span>PCB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="software">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-brain"></i></div>
+            <div class="project-category-tag">Software · ML</div>
+            <h3 class="project-title">Hand Gesture Recognition</h3>
+            <p class="project-desc">Real-time hand gesture detection system using OpenCV and MediaPipe to control a PC interface with hand movements.</p>
+            <div class="project-tech">
+              <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="hardware software">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-wave-square"></i></div>
+            <div class="project-category-tag">Signal Processing</div>
+            <h3 class="project-title">Digital Signal Analyzer</h3>
+            <p class="project-desc">MATLAB-based tool for analyzing, filtering, and visualizing digital signals with FFT, noise reduction, and waveform plotting.</p>
+            <div class="project-tech">
+              <span>MATLAB</span><span>DSP</span><span>FFT</span><span>Filtering</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="iot software">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-thermometer-half"></i></div>
+            <div class="project-category-tag">IoT · Software</div>
+            <h3 class="project-title">Weather Station Dashboard</h3>
+            <p class="project-desc">Raspberry Pi-based weather monitoring system with real-time sensor data visualization on a custom web dashboard.</p>
+            <div class="project-tech">
+              <span>Raspberry Pi</span><span>Python</span><span>Flask</span><span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-category="software">
+          <div class="project-card-inner">
+            <div class="project-icon"><i class="fas fa-globe"></i></div>
+            <div class="project-category-tag">Web · Software</div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">This very portfolio — a fully interactive, dark/light-mode capable personal portfolio with particles, animations, and responsive design.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/itsmetanishk3-sys/itsmetanishk3-sys.github.io" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="https://itsmetanishk3-sys.github.io" target="_blank" class="project-link project-link-demo"><i class="fas fa-external-link-alt"></i> Live</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-cta">
+        <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ────────────────────────────────────── -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04. MY JOURNEY</span>
+        <h2 class="section-title">Experience &amp; <span class="accent">Timeline</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content tilt-card">
+            <div class="timeline-date">2023 – Present</div>
+            <h3>B.Tech ECE Student</h3>
+            <span class="timeline-company">ABES Engineering College, Ghaziabad</span>
+            <p>Pursuing Electrical and Computer Engineering with a focus on embedded systems, signal processing, and software development. Active participant in technical clubs and hackathons.</p>
+            <div class="timeline-tags"><span>Coursework</span><span>Hackathons</span><span>Projects</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content tilt-card">
+            <div class="timeline-date">Coming Soon</div>
+            <h3>Internship / Industry Experience</h3>
+            <span class="timeline-company">Your next chapter</span>
+            <p>Actively seeking internship opportunities in embedded systems, IoT, or software development. Ready to apply classroom learning to real-world engineering challenges.</p>
+            <div class="timeline-tags"><span>Open to Opportunities</span><span>EE</span><span>CS</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CERTIFICATIONS ────────────────────────────────── -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05. CREDENTIALS</span>
+        <h2 class="section-title">Certi<span class="accent">fications</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card fade-in-up tilt-card">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <div class="cert-body">
+            <h3 class="cert-title">Python for Everybody</h3>
+            <span class="cert-issuer">Coursera / University of Michigan</span>
+            <span class="cert-date">Add Year</span>
+          </div>
+          <div class="cert-ribbon">Verified</div>
+        </div>
+
+        <div class="cert-card fade-in-up tilt-card" style="--delay:.1s">
+          <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+          <div class="cert-body">
+            <h3 class="cert-title">Embedded Systems Fundamentals</h3>
+            <span class="cert-issuer">Add Issuer</span>
+            <span class="cert-date">Add Year</span>
+          </div>
+          <div class="cert-ribbon">Verified</div>
+        </div>
+
+        <div class="cert-card fade-in-up tilt-card" style="--delay:.2s">
+          <div class="cert-icon"><i class="fas fa-robot"></i></div>
+          <div class="cert-body">
+            <h3 class="cert-title">Machine Learning Basics</h3>
+            <span class="cert-issuer">Add Issuer</span>
+            <span class="cert-date">Add Year</span>
+          </div>
+          <div class="cert-ribbon">Verified</div>
+        </div>
+
+        <div class="cert-card fade-in-up tilt-card" style="--delay:.3s">
+          <div class="cert-icon"><i class="fab fa-git-alt"></i></div>
+          <div class="cert-body">
+            <h3 class="cert-title">Git &amp; GitHub Essentials</h3>
+            <span class="cert-issuer">Add Issuer</span>
+            <span class="cert-date">Add Year</span>
+          </div>
+          <div class="cert-ribbon">Verified</div>
+        </div>
+
+        <div class="cert-card fade-in-up tilt-card" style="--delay:.4s">
+          <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-body">
+            <h3 class="cert-title">IoT Design and Applications</h3>
+            <span class="cert-issuer">Add Issuer</span>
+            <span class="cert-date">Add Year</span>
+          </div>
+          <div class="cert-ribbon">Verified</div>
+        </div>
+
+        <div class="cert-card cert-card-add fade-in-up" style="--delay:.5s">
+          <div class="cert-add-icon"><i class="fas fa-plus-circle"></i></div>
+          <span>Update with your real certifications!</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────── -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 06. GET IN TOUCH</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info fade-in-left">
+          <p class="contact-intro">
+            Have a project idea, an opportunity, or just want to chat about tech?
+            I'm always open to connecting with fellow engineers and creators.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:tanishk@example.com" class="contact-value">tanishk@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/itsmetanishk3-sys" target="_blank" class="contact-value">itsmetanishk3-sys</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/tanishk-srivastava" target="_blank" class="contact-value">tanishk-srivastava</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Ghaziabad, Uttar Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form fade-in-right" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+            <span id="btnLoading" class="hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+          </button>
+          <p class="form-note">* Form powered by <a href="https://formspree.io" target="_blank">Formspree</a>. Update the action URL with your Formspree endpoint.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="glitch" data-text="TS">&lt;TS/&gt;</span>
+        <p>Tanishk Srivastava &copy; <span id="year"></span></p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/itsmetanishk3-sys" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/tanishk-srivastava" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:tanishk@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Built with <i class="fas fa-heart" style="color:var(--accent)"></i> using pure HTML, CSS &amp; JS &mdash; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- ─── BACK TO TOP ───────────────────────────────────── -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ─── SCRIPTS ──────────────────────────────────────── -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
